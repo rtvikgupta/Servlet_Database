@@ -28,7 +28,7 @@ public class DbServlet extends HttpServlet {
 		out.print("<html><body><table>");
 		out.print("<tr><th>Training Id</th><th>Training Name</th><th>Available Seats</th><th>Action</th></tr>");
 		try {
-			Connection con = DbConnection.getConnection();
+			Connection con = new DbDaoImpl().getConnection();
 			PreparedStatement ps = con.prepareStatement("select * from training");
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {
