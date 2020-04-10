@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.capgemini.lab3.dbservice.DbConnection;
+import com.capgemini.lab3.dbservice.DbDaoImpl;
 
 /**
  * Servlet implementation class ResponseServlet
