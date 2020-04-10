@@ -32,7 +32,7 @@ public class ResponseServlet extends HttpServlet {
 			out.print("Hi you have successfully enrolled for "+tname+" training");
 			out.print("<br><a href='DbServlet'><< Back</a>");
 			try {
-				Connection con = DbConnection.getConnection();
+				Connection con = new DbDaoImpl().getConnection();
 				Statement st = con.createStatement();
 				String sql = "UPDATE TRAINING SET AvailableSeats = '"+--seat+"'WHERE TrainingName = '"+tname+"'";
 				ResultSet rs = st.executeQuery(sql);
